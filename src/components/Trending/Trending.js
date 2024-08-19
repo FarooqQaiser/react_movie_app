@@ -5,11 +5,13 @@ import ShowDetails from "../ShowDetails/ShowDetails";
 import { IoArrowBack } from "react-icons/io5";
 import { TailSpin } from "react-loader-spinner";
 import { FaArrowDown } from "react-icons/fa";
+import Button from "../Button/Button";
 
 export default function Trending() {
   const [data, setData] = useState(null);
   const [showMovieDetails, setShowMovieDetails] = useState(false);
   const [dataToPass, setDataToPass] = useState(null);
+  const [currentItems, setCurrentItems] = useState(8);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -47,6 +49,10 @@ export default function Trending() {
     setShowMovieDetails(false);
   };
 
+  const handleShowMore = () => {
+    setCurrentItems(currentItems + 4);
+  };
+
   return (
     <>
       {showMovieDetails ? (
@@ -69,7 +75,7 @@ export default function Trending() {
             {data ? (
               <>
                 <div className="mainMoviesContainer">
-                  {data.movies.map((movie, index) => (
+                  {data.movies.slice(0, currentItems).map((movie, index) => (
                     <div className="movieCard" key={index}>
                       <div className="pictureMovieDiv">
                         <img
@@ -94,6 +100,7 @@ export default function Trending() {
                     </div>
                   ))}
                 </div>
+                <Button name="Show More" handleButton={handleShowMore} />
               </>
             ) : (
               <>

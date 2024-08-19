@@ -5,11 +5,13 @@ import { FaArrowDown } from "react-icons/fa";
 import { TailSpin } from "react-loader-spinner";
 import ShowMovieDetails from "../ShowUpcomingDetails/ShowUpcomingDetails";
 import { IoArrowBack } from "react-icons/io5";
+import Button from "../Button/Button";
 
 export default function UpComingSeries() {
   const [moviesData, setMoviesData] = useState(null);
   const [dataToPass, setDataToPass] = useState(null);
   const [showMovieDetails, setShowMovieDetails] = useState(false);
+  const [currentItems, setCurrentItems] = useState(10);
 
   useEffect(() => {
     const fetchMoviesData = async () => {
@@ -50,6 +52,10 @@ export default function UpComingSeries() {
     setShowMovieDetails(true);
   };
 
+  const handleShowMore = () => {
+    setCurrentItems(currentItems + 2);
+  };
+
   return (
     <>
       {showMovieDetails ? (
@@ -74,7 +80,7 @@ export default function UpComingSeries() {
             </h1>
             {moviesData && moviesData.list ? (
               <>
-                {moviesData.list.map((movies, index) => (
+                {moviesData.list.slice(0, currentItems).map((movies, index) => (
                   <div className="moviesContainer" key={index}>
                     {movies.list.length > 1 ? (
                       <>
@@ -138,6 +144,7 @@ export default function UpComingSeries() {
                     )}
                   </div>
                 ))}
+                <Button name="Show More" handleButton={handleShowMore} />
               </>
             ) : (
               <>
