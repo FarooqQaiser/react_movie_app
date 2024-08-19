@@ -1,0 +1,104 @@
+.showDetailsContainer {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #16151dc0;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.showDetails {
+  width: 60%;
+  background-color: rgba(48, 40, 40, 0.363);
+  padding: 2%;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+
+.Intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.PictureDiv {
+  width: 100%;
+}
+
+.Image {
+  width: 250px;
+  height: 350px;
+}
+
+.Details {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.TitleDiv {
+  width: 100%;
+}
+
+.Title {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  gap: 10px;
+}
+
+.Title strong {
+  font-size: larger;
+  border-bottom: 2px solid;
+}
+
+.Title span {
+  color: blue;
+}
+
+.Info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.IMBDRatingDiv,
+.TimelineDiv,
+.YearDiv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.IMBDRatingHeading,
+.TimelineHeading,
+.YearHeading {
+  font-size: larger;
+  border-bottom: 2px solid;
+  width: 100%;
+}
+
+.IMBDRating,
+.Timeline,
+.Year {
+  font-size: large;
+  color: blue;
+  font-style: italic;
+  text-align: center;
+}
+
+.IMBDLink {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}

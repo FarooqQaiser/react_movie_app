@@ -1,0 +1,48 @@
+.headerContainer {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 1%;
+  top: 0;
+  position: relative;
+}
+
+.websiteNameContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.websiteName {
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.navbarContainer {
+  display: flex;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 100px;
+}
+
+.navbar ul li {
+  font-size: small;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarItem {
+  color: white;
+  transition: color 0.5s;
+}
+
+.navbarItem:hover {
+  color: #10baff;
+}

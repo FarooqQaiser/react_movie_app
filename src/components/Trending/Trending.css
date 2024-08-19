@@ -1,0 +1,69 @@
+.allMoviesContainer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.mainMoviesContainer {
+  padding: 20px;
+  background-color: #201c2180;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.moviesHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.movieCard {
+  background-color: #201c21d9;
+  width: 21vw;
+  height: 75vh;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pictureMovieDiv {
+  width: 15vw;
+  height: 50vh;
+  transition: transform 0.5s;
+}
+
+.pictureMovieDiv:hover {
+  transform: scale(1.2);
+}
+
+.pictureMovie {
+  width: 100%;
+  height: 100%;
+}
+
+.pictureMovie:hover {
+  cursor: pointer;
+}
+
+.titleMovieDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.titleMovie {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleMovie span {
+  text-align: center;
+}

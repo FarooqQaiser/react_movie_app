@@ -1,0 +1,18 @@
+* {
+  font-family: "Heebo", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-position-x: center;
+  background-position-y: center;
+  background-image: -webkit-image-set("./img/moviePicture.jpg");
+  background-size: cover;
+  background-repeat: space;
+  background-color: #16151d;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
